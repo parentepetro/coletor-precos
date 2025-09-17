@@ -1,0 +1,9 @@
+{
+  "timestamp": "2025-09-01T09:39:01.563678",
+  "distribuidora": "VIBRA_BB",
+  "sucesso": false,
+  "tempo_execucao": 103.14083290100098,
+  "erro": "Erro na coleta de VIBRA_BB: Falha no login",
+  "dados_extras": null,
+  "precos": []
+}

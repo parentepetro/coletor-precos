@@ -1,0 +1,17 @@
+2025-09-01 15:47:47,493 - ColetorCompleto - INFO - 🚀 INICIANDO COLETA AUTOMATIZADA COMPLETA
+🚀 COLETOR AUTOMATIZADO COMPLETO
+============================================================
+Distribuidoras: VIBRA MARQUES, VIBRA AP, VIBRA BB, IPIRANGA BB, IPIRANGA ML
+============================================================
+🔄 Executando coleta única...
+Traceback (most recent call last):
+  File "/Users/guiparente/robo_precos/coleta_precos.py", line 633, in <module>
+    main()
+  File "/Users/guiparente/robo_precos/coleta_precos.py", line 612, in main
+    relatorio = coletor.executar_coleta_completa()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/guiparente/robo_precos/coleta_precos.py", line 491, in executar_coleta_completa
+    if not self.setup_driver():
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'ColetorAutomatizadoCompleto' object has no attribute 'setup_driver'
+Finalizado em Seg  1 Set 2025 15:47:47 -03

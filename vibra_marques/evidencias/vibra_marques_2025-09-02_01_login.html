@@ -1,0 +1,767 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head id="j_idt2">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="https://cnhomolog.vibraenergia.com.br//temacn/images/favicon.ico">
+
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><script async="" src="https://scripts.clarity.ms/0.8.27/clarity.js"></script><script async="" src="https://www.clarity.ms/tag/srrdsllwjs"></script><script type="text/javascript" async="" src="https://static.hotjar.com/c/hotjar-1841793.js?sv=7"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-JL5WLFF5JB&amp;cx=c&amp;gtm=4e58s0"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-PZN46C9"></script><script type="text/javascript" src="/login/javax.faces.resource/jquery-1.8.3.min.js.jsf;jsessionid=pLX5C_8UqEGwfAHwYQGsGgvn71BoUbJJos3XAy9o.icacao-66759d6d6f-bccrs?ln=js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script><script type="text/javascript" src="/login/javax.faces.resource/br.js.jsf;jsessionid=pLX5C_8UqEGwfAHwYQGsGgvn71BoUbJJos3XAy9o.icacao-66759d6d6f-bccrs?ln=js"></script><script type="text/javascript" src="/login/javax.faces.resource/avisoCookie.js.jsf;jsessionid=pLX5C_8UqEGwfAHwYQGsGgvn71BoUbJJos3XAy9o.icacao-66759d6d6f-bccrs?ln=js"></script>
+		<title>Login - Vibra Energia</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Bem-vindo à página de login do Canal de Negócios da Vibra Energia.">
+		<meta name="author" content="BRQ.com">
+		<script language="JavaScript">
+			function abrir(janela) {
+				var width = 200;
+				var height = 175;
+				abrirNovaJanela(janela, 'login', width, height, 'no');
+			}
+
+			var win = null;
+			function abrirNovaJanela(mypage, myname, w, h, scroll) {
+				leftPosition = (screen.width) ? (screen.width - w) / 2 : 0;
+				topPosition = (screen.height) ? (screen.height - h) / 2 : 0;
+				settings = 'height=' + h + ',width=' + w + ',top='
+						+ topPosition + ',left=' + leftPosition
+						+ ',scrollbars=' + scroll + ',resizable=no';
+				win = window.open(mypage, myname, settings);
+			}
+		</script>
+
+		<script type="text/javascript">
+			//<![CDATA[
+
+			$(document).ready(function() {
+				$('#cor-mensagem').css('color', '#AD001F');
+				$('#modalIndisponibilidade').modal('show');
+			});
+
+			function exibeSenha() {
+				const togglePassword = document
+						.querySelector("#togglePassword");
+				const password = document.querySelector("#senha");
+				const type = password.getAttribute("type") === "password" ? "text"
+						: "password";
+				password.setAttribute("type", type);
+				if (type === "text") {
+					togglePassword.textContent = "visibility_off"
+				} else {
+					togglePassword.textContent = "visibility"
+				}
+			}
+
+			function buttonEnable() {
+				var acessar = document.getElementById('btn-acessar');
+				var usuario = document.getElementById('usuario');
+				var senha = document.getElementById('senha');
+				if ((usuario.value) && (senha.value)) {
+					acessar.disabled = false;
+				} else {
+					acessar.disabled = true;
+				}
+			}
+
+			//]]>
+		</script>
+		<style>
+.icone-vibra-header {
+	border-bottom: solid 1px #d6d7d7;
+}
+
+#cor-mensagem {
+	color: #ad001f;
+	left: 0px !important;
+	top: 10px;
+	padding-left: 0 !important;
+}
+
+.msgBase {
+	padding-left: 16px;
+	color: #ad001f !important;
+}
+
+.mensagem-secundaria {
+	left: 30px !important;
+	top: 8px !important;
+}
+</style>
+	<style>
+#br-modal-loading {
+	display: none;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+	color: #008542;
+	z-index: 10000000;
+	opacity: 0.85;
+	filter: alpha(opacity = 85); /* For IE8 and earlier */
+}
+
+#br-modal-loader {
+	color: #008542;
+	position: fixed;
+	top: 50%;
+	width: 100%;
+	margin-top: -4em;
+	text-align: center !important;
+}
+
+#br-modal-loader-icon {
+	opacity: 0.75;
+	filter: alpha(opacity = 75); /* For IE8 and earlier */
+	font-size: 50px !important;
+}
+
+.texto-titulo-alerta {
+	font-family: "Arial", "sans-serif";
+	font-size: 18px;
+	font-weight: bold;
+	color: #F68400;
+}
+
+.titulo-principal {
+	font-size: 23px;
+	font-weight: bold;
+	color: #008643;
+}
+
+.no-padding-right {
+	padding-right: 0 !important;
+}
+
+.modal-dialog {
+	overflow-y: auto !important
+}
+
+.modal-body {
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+.titulo_informativo {
+	text-align: center;
+	color: #004415;
+	font-weight: bold;
+}
+
+.btn_fechar_modal {
+	background-color: #004415 !important;
+	border-color: #004415 !important;
+	color: #FFFF !important;
+}
+</style>
+
+	<script>
+		$(document).ready(function() {
+			window.onbeforeunload = function() {
+				$("#br-modal-loading").toggle();
+			}
+			$("#central-servicos-shortcut").click(function() {
+				abreModal('#modal-central-servicos');
+			});
+		});
+		function abreModal(idModal) {
+			$(idModal).modal("show");
+		}
+	</script><link type="text/css" rel="stylesheet" href="/login/javax.faces.resource/estiloslogin.css.jsf;jsessionid=pLX5C_8UqEGwfAHwYQGsGgvn71BoUbJJos3XAy9o.icacao-66759d6d6f-bccrs?ln=css"><link type="text/css" rel="stylesheet" href="/login/javax.faces.resource/login-header.css.jsf;jsessionid=pLX5C_8UqEGwfAHwYQGsGgvn71BoUbJJos3XAy9o.icacao-66759d6d6f-bccrs?ln=css"><link type="text/css" rel="stylesheet" href="/login/javax.faces.resource/login-responsivo.css.jsf;jsessionid=pLX5C_8UqEGwfAHwYQGsGgvn71BoUbJJos3XAy9o.icacao-66759d6d6f-bccrs?ln=css"><link type="text/css" rel="stylesheet" href="/login/javax.faces.resource/br.css.jsf;jsessionid=pLX5C_8UqEGwfAHwYQGsGgvn71BoUbJJos3XAy9o.icacao-66759d6d6f-bccrs?ln=css"><link type="text/css" rel="stylesheet" href="/login/javax.faces.resource/avisoCookie.css.jsf;jsessionid=pLX5C_8UqEGwfAHwYQGsGgvn71BoUbJJos3XAy9o.icacao-66759d6d6f-bccrs?ln=css"><link type="text/css" rel="stylesheet" href="/login/javax.faces.resource/informativo.css.jsf;jsessionid=pLX5C_8UqEGwfAHwYQGsGgvn71BoUbJJos3XAy9o.icacao-66759d6d6f-bccrs?ln=css"><script async="" src="https://script.hotjar.com/modules.79484904679daf64371c.js" charset="utf-8"></script></head><body>
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQZCKQP" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+	</noscript>
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQZCKQP" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+	</noscript>
+	<div class="app">
+		<div class="container-fluid">
+
+			<div class="row" id="corpo">
+				<div class="col-lg-6 col-md-5 col-xs-12" id="colunaDir">
+					<div class="corpoLogin">
+<form id="form-principal-login" name="form-principal-login" method="post" action="/login/login.jsf;jsessionid=pLX5C_8UqEGwfAHwYQGsGgvn71BoUbJJos3XAy9o.icacao-66759d6d6f-bccrs" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="form-principal-login" value="form-principal-login" style="">
+
+		<!-- Modal Informativo -->
+		<!-- Modal Informativo FIM--><input id="navegadorDesk" type="hidden" name="navegadorDesk" value="Chrome 140 (140.0.0.0) | SO: Mac OS X 10_15_7 | Mobile: false | Resolução: 1440 x 900" style="">
+
+		<div class="row" id="formPerfil" style="text-align: center; padding: 16px;">
+			<div class="col-md-12 form-group icone-vibra-header">
+				<img src="resources/img/vibra_logo.png" alt="logoVibra">
+			</div>
+
+<!-- 			&lt;div class="col-md-12 form-group text-left titulo-canal"&gt; -->
+<!-- 				&lt;span class="titulo"&gt;Canal de Neg&oacute;cios&lt;/span&gt; -->
+<!-- 				&lt;div class="col-md-12 form-group padding-padrao"&gt; -->
+<!-- 					&lt;h:panelGroup rendered="false"&gt; -->
+<!-- 						&lt;div id="cor-mensagem" class="col-md-12 text-left"&gt; -->
+<!-- 							&lt;span style="text-align: center; line-height: 14px;"&gt;*Insira -->
+<!-- 								o login e senha enviados para o seu e-mail.&lt;/span&gt; -->
+<!-- 						&lt;/div&gt; -->
+<!-- 					&lt;/h:panelGroup&gt; -->
+<!-- 				&lt;/div&gt; -->
+<!-- 			&lt;/div&gt; -->
+
+
+			<div class="col-md-12 col-xs-12 padding-padrao" style="display: flex; flex-wrap: wrap; justify-content: center;">
+				<div class="col-md-12 col-xs-12"><input id="usuario" type="text" name="usuario" class="form-control custom-input" placeholder="Usuário" style="">
+				</div>
+			</div>
+			<div class="col-md-12 col-xs-12 padding-padrao" style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 20px;">
+				<div class="col-md-12 col-xs-12">
+					<i onclick="exibeSenha()" class="material-icons exibeSenha" id="togglePassword">visibility</i><input id="senha" type="password" name="senha" value="" class="form-control custom-input" placeholder="Senha" style="">
+				</div>
+			</div>
+
+			<div id="cor-mensagem mensagem-secundaria" class="col-md-12 left" style="pointer-events: none;">
+			</div>
+
+			<div class="col-md-12 form-group" style="margin-top: 16px; padding: 0 14px"><input id="btn-acessar" type="submit" name="btn-acessar" value="Acessar" class="btnLogin col-md-12 col-xs-12 col-lg-12" style="">
+			</div>
+			<div class="col-md-12 form-group text-left hidden-xs hidden-md hidden-sm" style="padding-left: 16px;"><script type="text/javascript" src="/login/javax.faces.resource/jsf.js.jsf;jsessionid=pLX5C_8UqEGwfAHwYQGsGgvn71BoUbJJos3XAy9o.icacao-66759d6d6f-bccrs?ln=javax.faces"></script><a href="#" onclick="mojarra.jsfcljs(document.getElementById('form-principal-login'),{'j_idt30':'j_idt30'},'');return false" class="corpoesqueci">
+					<span class="recuperar-senha-label">Recuperação de senha</span></a>
+			</div>
+		</div>
+		<div class="col-md-12 form-group text-left visible-xs visible-md visible-sm" style="padding-left: 16px;"><a href="#" onclick="mojarra.jsfcljs(document.getElementById('form-principal-login'),{'j_idt33':'j_idt33'},'');return false" class="corpoesqueci">
+				<span class="recuperar-senha-label">Recuperação de senha</span></a>
+		</div>
+		<div class="row row-modal-infos">
+			<div class="col-md-12 col-xs-12 info-item" id="central-servicos-shortcut" onclick="abreModal('#modal-central-servicos')">
+				<i class="fa fa-question-circle" aria-hidden="true"></i> <span>Central
+					de ajuda</span>
+			</div>
+			<div class="col-md-12 col-xs-12 info-item" onclick="abreModal('#modal-termos-uso')">
+				<i class="fa fa-info-circle" aria-hidden="true"></i> <span>Termos
+					de uso</span>
+			</div>
+			<div class="col-md-12 col-xs-12 info-item" onclick="abreModal('#modal-politica-privacidade')">
+				<i class="fa fa-file-text" aria-hidden="true"></i> <span>Política
+					de privacidade</span>
+			</div>
+		</div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="6756787306212456539:2127949752679257242" autocomplete="off" style="">
+</form>
+						<!-- 							&lt;div id="cor-mensagem" class="col-md-12 text-center"&gt; -->
+						<!-- 								&lt;h:messages styleClass="msgBase"/&gt; -->
+						<!-- 							&lt;/div&gt; -->
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-7 hidden-xs"></div>
+
+
+
+			</div>
+			<!-- modal para loading -->
+			<div id="br-modal-loading">
+				<div id="br-modal-loader">
+					<i id="br-modal-loader-icon" class="fa fa-spinner fa-pulse"></i>
+				</div>
+			</div>
+
+			<!-- MODAL CENTRAL DE AJUDA -->
+			<div class="modal-infos modal" id="modal-central-servicos" tabindex="-1" role="dialog" aria-labelledby="centralServicos" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header modal-cabecalho">
+							<h4 style="font-size: 24px; font-weight: 700;">Central de
+								Serviços</h4>
+							<i class="material-icons modal-close-icon" aria-hidden="true" data-dismiss="modal">close</i>
+
+							<!-- 							&lt;i class="fa fa-times close modal-close-icon" aria-hidden="true" -->
+							<!-- 								data-dismiss="modal"&gt;&lt;/i&gt; -->
+						</div>
+						<div class="modal-body">
+							<div class="col-md-6 col-xs-12 modal-face" style="padding-right: 12px; padding-left: 0px;">
+								<ul class="modal-lista-tile">
+									<li><strong>Cliente</strong></li>
+								</ul>
+								<ul class="modal-lista-content-info">
+									<li class="modal-lista-content-title"><strong>Capitais
+											e regiões metropolitanas</strong></li>
+									<li class="modal-lista-content-text-info">4002-2040</li>
+								</ul>
+								<ul class="modal-lista-content-info">
+									<li class="modal-lista-content-title"><strong>Demais
+											localidades</strong></li>
+									<li class="modal-lista-content-text-info">0800 282 2040</li>
+								</ul>
+								<ul class="modal-lista-content-info">
+									<li class="modal-lista-content-title"><strong>Horários
+											de funcionamento</strong></li>
+									<li class="modal-lista-content-text-info">De segunda a sexta,
+										das 7h às 20h.</li>
+									<li class="modal-lista-content-text-info">Aos sábados, das 8h
+										às 18h.</li>
+									<li class="modal-lista-content-text-info">Autoatendimento: 24h
+										por dia</li>
+								</ul>
+							</div>
+							<div class="col-md-6 col-xs-12 modal-face modal-second-face" style="padding-left: 12px !important; border: none;">
+								<ul class="modal-lista-content-info">
+									<li><strong>Transportadora</strong></li>
+								</ul>
+								<ul class="modal-lista-content-info">
+									<li class="modal-lista-content-title"><strong>Todo
+											Brasil</strong></li>
+									<li class="modal-lista-content-text-info">(21) 2566-2100</li>
+									<li class="modal-lista-content-text-info">Atendimento: 24h por
+										dia.</li>
+<!-- 									&lt;li class="modal-lista-content-text"&gt;Ap&oacute;s esse hor&aacute;rio, -->
+<!-- 										suporte exclusivo ao Cadastro de Transportador FOB.&lt;/li&gt; -->
+								</ul>
+<!-- 								&lt;ul class="modal-lista-content"&gt; -->
+<!-- 									&lt;li class="modal-lista-content-text"&gt;(21) 2566-2159&lt;/li&gt; -->
+<!-- 									&lt;li class="modal-lista-content-text"&gt;Segunda a sexta, das -->
+<!-- 										19h &agrave;s 07h.&lt;/li&gt; -->
+<!-- 									&lt;li class="modal-lista-content-text"&gt;S&aacute;bado, das 14h &agrave;s -->
+<!-- 										16h.&lt;/li&gt; -->
+
+<!-- 								&lt;/ul&gt; -->
+							</div>
+						</div>
+						<div class="modal-footer" style="height: 10vh;">
+							<span class="btn-fechar-modal" data-dismiss="modal">Fechar</span>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+			<!--FINAL MODAL CENTRAL DE AJUDA -->
+
+			<!-- -MODAL TERMOS DE USO -->
+			<div class="modal-infos modal" id="modal-termos-uso" tabindex="-1" role="dialog" aria-labelledby="centralServicos" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header modal-cabecalho">
+							<h4 style="font-size: 24px; font-weight: 700;">Termos de uso</h4>
+							<i class="material-icons modal-close-icon" aria-hidden="true" data-dismiss="modal">close</i>
+							<!-- 							&lt;i class="fa fa-times close modal-close-icon" aria-hidden="true" -->
+							<!-- 								data-dismiss="modal"&gt;&lt;/i&gt; -->
+						</div>
+						<div class="modal-body">
+							<div class="col-md-12 col-xs-12 modal-face" style="padding: 0; border: none;">
+								<ul class="modal-lista-content">
+									<li class="modal-lista-content-text">1. A Vibra coloca à
+										disposição de seus clientes o "Sistema de Comércio
+										Eletrônico". Nele, o cliente poderá desfrutar dos diversos
+										serviços disponíveis no site utilizando-se do conforto e
+										praticidade do auto-atendimento</li>
+								</ul>
+								<ul class="modal-lista-content">
+									<li class="modal-lista-content-text">2. A utilização do
+										Comércio Eletrônico não restringe o acesso do usuário aos
+										serviços oferecidos em outros canais como, por exemplo, a
+										Central de Atendimento via telefone, sendo mais uma
+										facilidade, não substituindo ou modificando suas relações
+										negociais com a Vibra.</li>
+								</ul>
+								<ul class="modal-lista-content">
+									<li class="modal-lista-content-text">3. Os serviços
+										disponíveis por meio do Comércio Eletrônico observarão
+										necessariamente as mesmas regras estabelecidas para o
+										atendimento tradicional, tais como: limites de crédito,
+										condições de entrega, disponibilidade do produto por ponto de
+										consumo, peculiaridades e circunstâncias comerciais e
+										contratuais do Cliente, entre outros.</li>
+								</ul>
+								<ul class="modal-lista-content">
+									<li class="modal-lista-content-text">4. O Sistema de
+										Comércio Eletrônico da Vibra estará a disposição do Usuário 24
+										(vinte e quatro) horas por dia, 7 (sete) dias por semana.</li>
+								</ul>
+								<ul class="modal-lista-content">
+									<li class="modal-lista-content-text">4.1 Fica o usuário
+										ciente de que poderão ocorrer interrupções, necessárias em
+										função de serviços de manutenção no sistema e/ou atualização
+										de páginas, bem como em razão de falhas na operação das
+										empresas fornecedoras de energia elétrica e/ou prestadoras de
+										serviços de telecomunicação, ou ainda por ações ou omissões de
+										terceiros, ficando a Vibra isenta do pagamento de qualquer
+										ônus decorrente destas paralisações.</li>
+								</ul>
+								<ul class="modal-lista-content">
+									<li class="modal-lista-content-text">5. Fica estabelecido que
+										o tempo por inatividade do Comércio Eletrônico é de 15
+										(quinze) minutos, após os quais o acesso será finalizado e
+										será necessário que seja feito um novo Login.</li>
+								</ul>
+								<ul class="modal-lista-content">
+									<li class="modal-lista-content-text">6. O usuário principal é
+										o único responsável pela utilização das senhas de acesso ao
+										Comércio Eletrônico, inclusive sobre as autorizações
+										fornecidas aos usuários dependentes.</li>
+								</ul>
+								<ul class="modal-lista-content">
+									<li class="modal-lista-content-text">6.1 Fica o usuário ciente
+										de que é de sua inteira responsabilidade trocar periodicamente
+										sua senha de acesso, como medida de segurança. A política de
+										segurança da Vibra orienta seus usuários a trocarem a cada 90
+										dias.</li>
+								</ul>
+								<ul class="modal-lista-content">
+									<li class="modal-lista-content-text">7. O usuário é
+										integralmente responsável pelos equipamentos necessários para
+										sua conexão à Internet (computador, linha telefônica, modem,
+										etc.) e sua manutenção, softwares, contratação de provedor de
+										acesso à Internet e pelos custos de instalação, conexão, uso
+										da linha telefônica, energia elétrica e outros custos
+										inerentes.</li>
+								</ul>
+								<ul class="modal-lista-content">
+									<li class="modal-lista-content-text">8. A Vibra não
+										responderá pela falta de fornecimento de energia elétrica,
+										falhas no sistema de transmissão ou de roteamento no acesso à
+										Internet.</li>
+								</ul>
+								<ul class="modal-lista-content">
+									<li class="modal-lista-content-text" style="font-style: italic; font-weight: bold;">9. A Vibra
+										poderá, sem aviso prévio, limitar o acesso a alguns serviços
+										disponíveis, assim como interromper, suspender ou cancelar o
+										acesso do Cliente ao Comércio Eletrônico, desativar ou
+										descontinuar o Site, não incorrendo qualquer responsabilidade,
+										indenização, ônus ou encargos para a Vibra.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="modal-footer" style="height: 10vh;">
+							<span class="btn-fechar-modal" data-dismiss="modal">Fechar</span>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+			<!-- -FIM MODAL TERMOS DE USO -->
+
+			<!-- MODAL POLITICA PRIVACIDADE -->
+			<div class="modal-infos modal" id="modal-politica-privacidade" tabindex="-1" role="dialog" aria-labelledby="centralServicos" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header modal-cabecalho">
+							<h4 style="font-size: 24px; font-weight: 700;">Política de
+								privacidade</h4>
+							<i class="material-icons modal-close-icon" aria-hidden="true" data-dismiss="modal">close</i>
+						</div>
+						<div class="modal-body modal-content-privacidade">
+							<div class="col-md-12  col-xs-12 modal-face" style="padding: 0; border: none;">
+								<ul class="modal-lista-content">
+									<li class="modal-lista-content-text">A Vibra sabe o quanto
+										a sua privacidade e a adequada utilização dos seus dados
+										pessoais são fundamentais. Informamos que coletamos cookies
+										nesse site para melhorar sua experiência de uso. Conheça a
+										nossa <a href="http://www.vibraenergia.com.br/portal-da-privacidade" target="_blank"><u>Política de Privacidade</u> </a> e a nossa
+										<a href="http://www.vibraenergia.com.br/portal-da-privacidade#cookies" target="_blank"><u>Política de Cookies</u></a> e veja como
+										tratamos os dados pessoais.
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="modal-footer" style="height: 10vh;">
+							<span class="btn-fechar-modal" data-dismiss="modal">Fechar</span>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+			<!--FIM  MODAL POLITICA PRIVACIDADE -->
+
+
+		</div>
+	</div>
+
+	<script>
+		//<![CDATA[
+
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		var unknown = '-';
+
+		// screen
+		var screenSize = '';
+		if (screen.width) {
+			width = (screen.width) ? screen.width : '';
+			height = (screen.height) ? screen.height : '';
+			screenSize += '' + width + " x " + height;
+		}
+
+		// browser
+		var nVer = navigator.appVersion;
+		var nAgt = navigator.userAgent;
+		var browser = navigator.appName;
+		var version = '' + parseFloat(navigator.appVersion);
+		var majorVersion = parseInt(navigator.appVersion, 10);
+		var nameOffset, verOffset, ix;
+
+		// Opera
+		if ((verOffset = nAgt.indexOf('Opera')) != -1) {
+			browser = 'Opera';
+			version = nAgt.substring(verOffset + 6);
+			if ((verOffset = nAgt.indexOf('Version')) != -1) {
+				version = nAgt.substring(verOffset + 8);
+			}
+		}
+		// Opera Next
+		if ((verOffset = nAgt.indexOf('OPR')) != -1) {
+			browser = 'Opera';
+			version = nAgt.substring(verOffset + 4);
+		}
+		// MSIE
+		else if ((verOffset = nAgt.indexOf('MSIE')) != -1) {
+			browser = 'Microsoft Internet Explorer';
+			version = nAgt.substring(verOffset + 5);
+		}
+		// Chrome
+		else if ((verOffset = nAgt.indexOf('Chrome')) != -1) {
+			browser = 'Chrome';
+			version = nAgt.substring(verOffset + 7);
+		}
+		// Safari
+		else if ((verOffset = nAgt.indexOf('Safari')) != -1) {
+			browser = 'Safari';
+			version = nAgt.substring(verOffset + 7);
+			if ((verOffset = nAgt.indexOf('Version')) != -1) {
+				version = nAgt.substring(verOffset + 8);
+			}
+		}
+		// Firefox
+		else if ((verOffset = nAgt.indexOf('Firefox')) != -1) {
+			browser = 'Firefox';
+			version = nAgt.substring(verOffset + 8);
+		}
+		// MSIE 11+
+		else if (nAgt.indexOf('Trident/') != -1) {
+			browser = 'Microsoft Internet Explorer';
+			version = nAgt.substring(nAgt.indexOf('rv:') + 3);
+		}
+		// Other browsers
+		else if ((nameOffset = nAgt.lastIndexOf(' ') + 1) < (verOffset = nAgt
+				.lastIndexOf('/'))) {
+			browser = nAgt.substring(nameOffset, verOffset);
+			version = nAgt.substring(verOffset + 1);
+			if (browser.toLowerCase() == browser.toUpperCase()) {
+				browser = navigator.appName;
+			}
+		}
+		// trim the version string
+		if ((ix = version.indexOf(';')) != -1)
+			version = version.substring(0, ix);
+		if ((ix = version.indexOf(' ')) != -1)
+			version = version.substring(0, ix);
+		if ((ix = version.indexOf(')')) != -1)
+			version = version.substring(0, ix);
+
+		majorVersion = parseInt('' + version, 10);
+		if (isNaN(majorVersion)) {
+			version = '' + parseFloat(navigator.appVersion);
+			majorVersion = parseInt(navigator.appVersion, 10);
+		}
+
+		// mobile version
+		var mobile = /Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(nVer);
+
+		// cookie
+		var cookieEnabled = (navigator.cookieEnabled) ? true : false;
+
+		if (typeof navigator.cookieEnabled == 'undefined' && !cookieEnabled) {
+			document.cookie = 'testcookie';
+			cookieEnabled = (document.cookie.indexOf('testcookie') != -1) ? true
+					: false;
+		}
+
+		// system
+		var os = unknown;
+		var clientStrings = [
+				{
+					s : 'Windows 10',
+					r : /(Windows 10.0|Windows NT 10.0)/
+				},
+				{
+					s : 'Windows 8.1',
+					r : /(Windows 8.1|Windows NT 6.3)/
+				},
+				{
+					s : 'Windows 8',
+					r : /(Windows 8|Windows NT 6.2)/
+				},
+				{
+					s : 'Windows 7',
+					r : /(Windows 7|Windows NT 6.1)/
+				},
+				{
+					s : 'Windows Vista',
+					r : /Windows NT 6.0/
+				},
+				{
+					s : 'Windows Server 2003',
+					r : /Windows NT 5.2/
+				},
+				{
+					s : 'Windows XP',
+					r : /(Windows NT 5.1|Windows XP)/
+				},
+				{
+					s : 'Windows 2000',
+					r : /(Windows NT 5.0|Windows 2000)/
+				},
+				{
+					s : 'Windows ME',
+					r : /(Win 9x 4.90|Windows ME)/
+				},
+				{
+					s : 'Windows 98',
+					r : /(Windows 98|Win98)/
+				},
+				{
+					s : 'Windows 95',
+					r : /(Windows 95|Win95|Windows_95)/
+				},
+				{
+					s : 'Windows NT 4.0',
+					r : /(Windows NT 4.0|WinNT4.0|WinNT|Windows NT)/
+				},
+				{
+					s : 'Windows CE',
+					r : /Windows CE/
+				},
+				{
+					s : 'Windows 3.11',
+					r : /Win16/
+				},
+				{
+					s : 'Android',
+					r : /Android/
+				},
+				{
+					s : 'Open BSD',
+					r : /OpenBSD/
+				},
+				{
+					s : 'Sun OS',
+					r : /SunOS/
+				},
+				{
+					s : 'Linux',
+					r : /(Linux|X11)/
+				},
+				{
+					s : 'iOS',
+					r : /(iPhone|iPad|iPod)/
+				},
+				{
+					s : 'Mac OS X',
+					r : /Mac OS X/
+				},
+				{
+					s : 'Mac OS',
+					r : /(MacPPC|MacIntel|Mac_PowerPC|Macintosh)/
+				},
+				{
+					s : 'QNX',
+					r : /QNX/
+				},
+				{
+					s : 'UNIX',
+					r : /UNIX/
+				},
+				{
+					s : 'BeOS',
+					r : /BeOS/
+				},
+				{
+					s : 'OS/2',
+					r : /OS\/2/
+				},
+				{
+					s : 'Search Bot',
+					r : /(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/
+				} ];
+		for ( var id in clientStrings) {
+			var cs = clientStrings[id];
+			if (cs.r.test(nAgt)) {
+				os = cs.s;
+				break;
+			}
+		}
+
+		var osVersion = unknown;
+
+		if (/Windows/.test(os)) {
+			osVersion = /Windows (.*)/.exec(os)[1];
+			os = 'Windows';
+		}
+
+		switch (os) {
+		case 'Mac OS X':
+			osVersion = /Mac OS X (10[\.\_\d]+)/.exec(nAgt)[1];
+			break;
+
+		case 'Android':
+			osVersion = /Android ([\.\_\d]+)/.exec(nAgt)[1];
+			break;
+
+		case 'iOS':
+			osVersion = /OS (\d+)_(\d+)_?(\d+)?/.exec(nVer);
+			osVersion = osVersion[1] + '.' + osVersion[2] + '.'
+					+ (osVersion[3] | 0);
+			break;
+		}
+
+		// flash (you'll need to include swfobject)
+		/* script src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js" */
+		var flashVersion = 'no check';
+		if (typeof swfobject != 'undefined') {
+			var fv = swfobject.getFlashPlayerVersion();
+			if (fv.major > 0) {
+				flashVersion = fv.major + '.' + fv.minor + ' r' + fv.release;
+			} else {
+				flashVersion = unknown;
+			}
+		}
+
+		var browserInfo = browser + ' ' + majorVersion + ' (' + version
+				+ ') | SO: ' + os + ' ' + osVersion + ' | Mobile: ' + mobile
+				+ ' | Resolução: ' + screenSize;
+
+		var campo_navegador_desk = document.getElementById('navegadorDesk');
+		var campo_navegador_mobile = document.getElementById('navegadorMobile');
+
+		if (campo_navegador_desk) {
+			campo_navegador_desk.value = browserInfo;
+		}
+
+		if (campo_navegador_mobile) {
+			campo_navegador_mobile.value = browserInfo;
+		}
+		const urlHml = window.location.host.includes('cnhomolog.') || window.location.host.includes('cndesenv.');
+		const urlPrd = window.location.host.includes('cn.');
+		var urlGTM = '';
+
+	if(urlHml){
+		urlGTM = 'GTM-KQZCKQP';
+	}
+	if(urlPrd){
+		urlGTM = 'GTM-PZN46C9';
+	}
+	<!-- Google Tag Manager -->
+		(function(w, d, s, l, i) {	
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start' : new Date().getTime(),
+				event : 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l='
+					+ l
+					: '';
+			j.async = true;
+			j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', urlGTM);
+		<!--End Google Tag Manager -->
+		//]]>
+	</script>
+<script type="text/javascript" id="" charset="">(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};c=e.createElement(f);c.async=1;c.src="https://www.clarity.ms/tag/"+g;d=e.getElementsByTagName(f)[0];d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","srrdsllwjs");</script><iframe id="_hjSafeContext_46350474" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="about:blank" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe></body></html>

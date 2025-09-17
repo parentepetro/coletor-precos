@@ -1,0 +1,9 @@
+{
+  "timestamp": "2025-08-31T23:16:26.370324",
+  "distribuidora": "IPIRANGA_BB",
+  "sucesso": false,
+  "tempo_execucao": 132.6139919757843,
+  "erro": "Erro na coleta de IPIRANGA_BB: Falha no login",
+  "dados_extras": null,
+  "precos": []
+}

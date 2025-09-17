@@ -1,0 +1,71 @@
+{
+  "timestamp": "2025-09-01T14:09:53.209597",
+  "total_distribuidoras": 5,
+  "resultados": [
+    {
+      "data_coleta": "2025-09-01",
+      "empresa": "PARENTE & ARAUJO COMBUSTIVEL LTDA",
+      "distribuidora": "VIBRA MARQUES",
+      "etanol_hidratado": null,
+      "gasolina_comum": null,
+      "gasolina_aditivada": null,
+      "diesel_s10": null,
+      "diesel_s500": null,
+      "diesel_s10_aditivado": null,
+      "diesel_s500_aditivado": null,
+      "observacoes": ""
+    },
+    {
+      "data_coleta": "2025-09-01",
+      "empresa": "AUTO POSTO SAO JOSE LTDA",
+      "distribuidora": "VIBRA AP",
+      "etanol_hidratado": null,
+      "gasolina_comum": null,
+      "gasolina_aditivada": null,
+      "diesel_s10": null,
+      "diesel_s500": null,
+      "diesel_s10_aditivado": null,
+      "diesel_s500_aditivado": null,
+      "observacoes": ""
+    },
+    {
+      "data_coleta": "2025-09-01",
+      "empresa": "PARENTE PETROLEO LTDA",
+      "distribuidora": "VIBRA BB",
+      "etanol_hidratado": null,
+      "gasolina_comum": null,
+      "gasolina_aditivada": null,
+      "diesel_s10": null,
+      "diesel_s500": null,
+      "diesel_s10_aditivado": null,
+      "diesel_s500_aditivado": null,
+      "observacoes": ""
+    },
+    {
+      "data_coleta": "2025-09-01",
+      "empresa": "Parente Petroleo Ltda",
+      "distribuidora": "IPIRANGA BB",
+      "etanol_hidratado": null,
+      "gasolina_comum": null,
+      "gasolina_aditivada": null,
+      "diesel_s10": null,
+      "diesel_s500": null,
+      "diesel_s10_aditivado": null,
+      "diesel_s500_aditivado": null,
+      "observacoes": ""
+    },
+    {
+      "data_coleta": "2025-09-01",
+      "empresa": "Posto ML",
+      "distribuidora": "IPIRANGA ML",
+      "etanol_hidratado": null,
+      "gasolina_comum": null,
+      "gasolina_aditivada": null,
+      "diesel_s10": null,
+      "diesel_s500": null,
+      "diesel_s10_aditivado": null,
+      "diesel_s500_aditivado": null,
+      "observacoes": "Erro na coleta: Message: \nStacktrace:\n0   chromedriver                        0x0000000103146e00 cxxbridge1$str$ptr + 2742224\n1   chromedriver                        0x000000010313ed00 cxxbridge1$str$ptr + 2709200\n2   chromedriver                        0x0000000102c890b8 cxxbridge1$string$len + 90520\n3   chromedriver                        0x0000000102cd05d8 cxxbridge1$string$len + 382648\n4   chromedriver                        0x0000000102d11980 cxxbridge1$string$len + 649824\n5   chromedriver                        0x0000000102cc48f4 cxxbridge1$string$len + 334292\n6   chromedriver                        0x000000010310a478 cxxbridge1$str$ptr + 2494024\n7   chromedriver                        0x000000010310d6a4 cxxbridge1$str$ptr + 2506868\n8   chromedriver                        0x00000001030eb3b0 cxxbridge1$str$ptr + 2366848\n9   chromedriver                        0x000000010310df4c cxxbridge1$str$ptr + 2509084\n10  chromedriver                        0x00000001030dc4a8 cxxbridge1$str$ptr + 2305656\n11  chromedriver                        0x000000010312d644 cxxbridge1$str$ptr + 2637844\n12  chromedriver                        0x000000010312d7d0 cxxbridge1$str$ptr + 2638240\n13  chromedriver                        0x000000010313e94c cxxbridge1$str$ptr + 2708252\n14  libsystem_pthread.dylib             0x000000019b2daf94 _pthread_start + 136\n15  libsystem_pthread.dylib             0x000000019b2d5d34 thread_start + 8\n"
+    }
+  ]
+}

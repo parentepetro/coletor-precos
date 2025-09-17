@@ -1,0 +1,9 @@
+{
+  "timestamp": "2025-08-31T23:11:15.404359",
+  "distribuidora": "VIBRA_AP",
+  "sucesso": false,
+  "tempo_execucao": 60.03773522377014,
+  "erro": "Erro na coleta de VIBRA_AP: Falha no login",
+  "dados_extras": null,
+  "precos": []
+}

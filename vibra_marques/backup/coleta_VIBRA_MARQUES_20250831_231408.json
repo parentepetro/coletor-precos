@@ -1,0 +1,9 @@
+{
+  "timestamp": "2025-08-31T23:14:08.751316",
+  "distribuidora": "VIBRA_MARQUES",
+  "sucesso": false,
+  "tempo_execucao": 60.095786809921265,
+  "erro": "Erro na coleta de VIBRA_MARQUES: Falha no login",
+  "dados_extras": null,
+  "precos": []
+}

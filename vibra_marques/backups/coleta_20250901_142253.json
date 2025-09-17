@@ -1,0 +1,71 @@
+{
+  "timestamp": "2025-09-01T14:22:53.220351",
+  "total_distribuidoras": 5,
+  "resultados": [
+    {
+      "data_coleta": "2025-09-01",
+      "empresa": "PARENTE & ARAUJO COMBUSTIVEL LTDA",
+      "distribuidora": "VIBRA MARQUES",
+      "etanol_hidratado": null,
+      "gasolina_comum": null,
+      "gasolina_aditivada": null,
+      "diesel_s10": null,
+      "diesel_s500": null,
+      "diesel_s10_aditivado": null,
+      "diesel_s500_aditivado": null,
+      "observacoes": ""
+    },
+    {
+      "data_coleta": "2025-09-01",
+      "empresa": "AUTO POSTO SAO JOSE LTDA",
+      "distribuidora": "VIBRA AP",
+      "etanol_hidratado": null,
+      "gasolina_comum": null,
+      "gasolina_aditivada": null,
+      "diesel_s10": null,
+      "diesel_s500": null,
+      "diesel_s10_aditivado": null,
+      "diesel_s500_aditivado": null,
+      "observacoes": ""
+    },
+    {
+      "data_coleta": "2025-09-01",
+      "empresa": "PARENTE PETROLEO LTDA",
+      "distribuidora": "VIBRA BB",
+      "etanol_hidratado": null,
+      "gasolina_comum": null,
+      "gasolina_aditivada": null,
+      "diesel_s10": null,
+      "diesel_s500": null,
+      "diesel_s10_aditivado": null,
+      "diesel_s500_aditivado": null,
+      "observacoes": ""
+    },
+    {
+      "data_coleta": "2025-09-01",
+      "empresa": "Parente Petroleo Ltda",
+      "distribuidora": "IPIRANGA BB",
+      "etanol_hidratado": null,
+      "gasolina_comum": null,
+      "gasolina_aditivada": null,
+      "diesel_s10": null,
+      "diesel_s500": null,
+      "diesel_s10_aditivado": null,
+      "diesel_s500_aditivado": null,
+      "observacoes": ""
+    },
+    {
+      "data_coleta": "2025-09-01",
+      "empresa": "Posto ML",
+      "distribuidora": "IPIRANGA ML",
+      "etanol_hidratado": null,
+      "gasolina_comum": null,
+      "gasolina_aditivada": null,
+      "diesel_s10": null,
+      "diesel_s500": null,
+      "diesel_s10_aditivado": null,
+      "diesel_s500_aditivado": null,
+      "observacoes": ""
+    }
+  ]
+}
