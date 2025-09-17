@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Logs & cache
+logs/
+*.log
+
+# Playwright
+playwright-report/
+test-results/
+.tmp/
