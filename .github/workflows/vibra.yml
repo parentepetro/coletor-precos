@@ -1,11 +1,9 @@
 name: Vibra Marques Bot (cloud)
 
 on:
-  # agendado (ex.: a cada 6 horas) — ajuste como quiser
+  workflow_dispatch: {}         # botão "Run workflow"
   schedule:
-    - cron: "0 */6 * * *"
-  # permite rodar manualmente pelo botão "Run workflow"
-  workflow_dispatch: {}
+    - cron: "0 */6 * * *"       # opcional: a cada 6h
 
 jobs:
   run-bot:
@@ -27,29 +25,23 @@ jobs:
           pip install -r requirements.txt
           python -m playwright install --with-deps
 
-      # Opcional: troque para firefox se Chromium headless for bloqueado
-      # - name: Force Firefox
-      #   run: echo "BROWSER=firefox" >> $GITHUB_ENV
+      # Se o site bloquear Chromium headless, descomente a linha abaixo:
+      # - run: echo "BROWSER=firefox" >> $GITHUB_ENV
 
       - name: Run vibra_marques
         env:
-          # credenciais e configs vindas de Secrets
           VIBRA_LOGIN_URL: ${{ secrets.VIBRA_URL }}
-          USUARIO:         ${{ secrets.VIBRA_USUARIO }}
-          SENHA:           ${{ secrets.VIBRA_SENHA }}
+          VIBRA_USUARIO:   ${{ secrets.VIBRA_USUARIO }}
+          VIBRA_SENHA:     ${{ secrets.VIBRA_SENHA }}
           SUPABASE_URL:    ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY:    ${{ secrets.SUPABASE_KEY }}
           SUPABASE_TABLE:  ${{ secrets.SUPABASE_TABLE }}
-          HEADLESS: "true"            # na nuvem, rode headless
+          HEADLESS: "true"
           NAV_TIMEOUT_MS: "60000"
-          # Se usar proxy, descomente estas linhas e trate no seu código:
-          # HTTP_PROXY:  ${{ secrets.HTTP_PROXY }}
-          # HTTPS_PROXY: ${{ secrets.HTTPS_PROXY }}
         run: |
           python vibra_marques/vibra_marques.py
 
-      # Sempre salve screenshots/HTML de debug como artefatos
-      - name: Upload debug artifacts
+      - name: Upload debug artifacts (screenshots/HTML)
         if: always()
         uses: actions/upload-artifact@v4
         with:
