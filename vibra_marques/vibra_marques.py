@@ -33,7 +33,7 @@ headers = {
 
 async def extrair_precos_vibra():
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=False)  # altere para True se quiser rodar oculto
+        browser = await getattr(p, os.getenv('BROWSER', 'chromium')).launch(headless=os.getenv('HEADLESS','true').lower()=='true', args=['--no-sandbox'])  # altere para True se quiser rodar oculto
         context = await browser.new_context()
         page = await context.new_page()
 
