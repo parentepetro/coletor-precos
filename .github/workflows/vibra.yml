@@ -1,9 +1,9 @@
 name: Vibra Marques Bot (cloud)
 
 on:
-  workflow_dispatch: {}         # botão "Run workflow"
+  workflow_dispatch: {}
   schedule:
-    - cron: "0 */6 * * *"       # opcional: a cada 6h
+    - cron: "0 */6 * * *"   # opcional: a cada 6h
 
 jobs:
   run-bot:
@@ -25,7 +25,7 @@ jobs:
           pip install -r requirements.txt
           python -m playwright install --with-deps
 
-      # Se o site bloquear Chromium headless, descomente a linha abaixo:
+      # Se o site bloquear Chromium headless, descomente:
       # - run: echo "BROWSER=firefox" >> $GITHUB_ENV
 
       - name: Run vibra_marques
@@ -41,7 +41,7 @@ jobs:
         run: |
           python vibra_marques/vibra_marques.py
 
-      - name: Upload debug artifacts (screenshots/HTML)
+      - name: Upload debug artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
